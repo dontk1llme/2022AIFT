@@ -6,8 +6,7 @@
 * 개발 환경 구축
     * Anaconda 설치
     * visual studio code 설치
-    * ![환경](<img width="960" alt="193453348-5959d70a-18c0-4c0e-9636-ff1c7ed84aef" src="https://user-images.githubusercontent.com/89983177/193454044-b0b76e7c-9414-44f7-b947-989498b86c12.png">
-)
+    * 환경: https://github.com/dontk1llme/2022AIFT/issues/2
 ---
 
 #### Todo
