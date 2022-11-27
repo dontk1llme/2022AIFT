@@ -96,3 +96,4 @@ if __name__ == "__main__":
 rq_data_minute()
 
 app.exec()
+
