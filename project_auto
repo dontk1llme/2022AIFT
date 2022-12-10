@@ -5,7 +5,7 @@
 from msilib.schema import SelfReg
 import sys
 import logging
-
+import time
 from logging.handlers import TimedRotatingFileHandler
 from typing import Self
 from PyQt5.QAxContainer import QAxWidget
