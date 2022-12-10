@@ -5,6 +5,7 @@
 from msilib.schema import SelfReg
 import sys
 import logging
+
 from logging.handlers import TimedRotatingFileHandler
 from typing import Self
 from PyQt5.QAxContainer import QAxWidget
@@ -45,7 +46,7 @@ class RequestThreadWorker(QObject):
             try:
                 request = self.request_queue.popleft()
             except IndexError as e:
-                time.sleep(요청주기)
+                time.sleep(0.2)
                 continue
 
             # 요청 실행
@@ -55,10 +56,10 @@ class RequestThreadWorker(QObject):
             # 요청에대한 결과 대기
             if not self.request_thread_lock.acquire(blocking=True, timeout=5):
                 # 요청 실패
-                time.sleep(요청주기)
+                time.sleep(0.2)
                 self.retry(request)  # 실패한 요청 재시도
 
-            time.sleep(요청주기)  # 0.2초 이상 대기 후 마무리
+            time.sleep(0.2)  # 0.2초 이상 대기 후 마무리
 
 class SyncRequestDecorator:
     '''키움 API 동기화 데코레이터
